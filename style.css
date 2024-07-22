@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Roboto:wght@300&display=swap");
+
+* {
+  font-family: "Inconsolata", monospace !important;
+  box-sizing: content-box !important;
+}
+
+body {
+  line-height: normal !important;
+}
+.steps {
+  display: flex;
+}
+
+#start-game {
+  display: block;
+  position: relative;
+  width: 180px;
+  background-color: black;
+  height: 40px;
+  border-radius: 10px;
+  margin: 50px;
+  filter: brightness(0.8);
+  background-image: linear-gradient(top to, black, black);
+  cursor: pointer;
+}
+
+#win {
+  display: none;
+}
+
+#start-game label {
+  content: "";
+  background-color: white;
+  border: 3px solid black;
+  background-repeat: no-repeat;
+  background-size: 5rem 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 174px;
+  font-size: 2rem;
+  height: inherit;
+  border-radius: inherit;
+  transform: translateY(-15px);
+  transition-duration: 125ms;
+  transition-delay: 125ms;
+  transition-delay: initial;
+  cursor: pointer;
+}
+
+#start-game:active label {
+  transform: translateY(-5px);
+  transition-duration: 125ms;
+  transition-delay: initial;
+}
+
+body {
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#board {
+  display: none;
+}
+
+#level-number {
+  margin-left: 5px;
+}
+
+.level-container {
+  display: flex;
+  flex-direction: row;
+}
+.level-container p {
+  margin: 0px;
+}
+
+#level {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+}
+.github-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main {
+  display: none;
+  max-width: 600px;
+  color: #fff;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 140px;
+}
+
+.buttons-container.wrong .game-btn {
+  background-color: red !important;
+  filter: brightness(1.5) !important;
+  background-image: linear-gradient(to top, red, rgb(130, 130, 130)) !important;
+}
+
+.buttons-container.wrong .game-btn .front {
+  background-color: red !important;
+  filter: brightness(1);
+}
+
+.buttons-container .game-btn {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 85px;
+  border-radius: 25%;
+  margin: 20px;
+  filter: brightness(0.8);
+  box-shadow: 0 1px 1px 2px rgba(1, 3, 7, 0.75);
+  cursor: pointer;
+}
+
+.buttons-container .game-btn:hover {
+  filter: brightness(0.7);
+}
+
+.buttons-container .game-btn .front {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 5rem 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  font-size: 4rem;
+  height: inherit;
+  border-radius: inherit;
+  transform: translateY(-20px);
+  transition-duration: 125ms;
+  transition-delay: 125ms;
+}
+
+.player-active .game-btn:active .front {
+  transform: translateY(-5px);
+  transition-duration: 125ms;
+  transition-delay: initial;
+}
+
+.buttons-container .clicked,
+.buttons-container .game-btn:active {
+  filter: brightness(1);
+}
+
+.buttons-container .clicked .front {
+  transform: translateY(-5px)!important;
+  transition-duration: 125ms;
+  transition-delay: initial;
+}
+
+.turn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.current-turn {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  /* margin-left: 5px; */
+}
+
+.buttons-container > .game-btn .front {
+  transition-delay: initial;
+  cursor: pointer;
+}
+
+.progress {
+  height: 25px;
+  width: 100%;
+  border-radius: 0;
+  border: 3px solid black;
+  font-size: 1.2rem;
+  margin-top: 3px;
+  position: relative;
+}
+
+.progress-bar {
+  z-index: 1;
+}
+
+.progress span {
+  color: black;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+#tutorial p {
+  max-width: 450px;
+}
+
+.right {
+  position:absolute;
+  bottom: 15px;
+  margin: auto;
+  font-size: 1.2rem;
+  color: darkgray;
+}
+
+@media screen and (max-width: 600px) {
+  .buttons-container .game-btn .front {
+    background-size: 3rem 3rem;
+    transform: translateY(-15px);
+  }
+
+  #game {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .buttons-container .game-btn {
+    width: 60px;
+    height: 45px;
+    margin: 10px;
+  }
+
+  .front {
+    font-size: 2rem !important;
+  }
+}
